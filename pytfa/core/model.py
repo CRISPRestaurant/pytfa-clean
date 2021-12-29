@@ -377,10 +377,6 @@ class LCSBModel(ABC):
                                                  for k,v in self._var_dict.items()},
                                                  orient = 'index')
 
-        self.\
-            solution.values = pd.DataFrame.from_dict({k:v.unscaled * v.scaling_factor
-                                                 for k,v in self._var_dict.items()},
-                                                 orient = 'index')
         return solution
 
     def optimize(self, objective_sense=None, **kwargs):
